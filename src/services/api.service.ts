@@ -1,5 +1,5 @@
 import {IJsonPH_Todo} from "../models/jsonPH_model.ts";
-import {IDummy_Todo} from "../models/dummy_model.ts";
+import {IResponse} from "../models/dummy_model.ts";
 
 
 export const getJsonPHModel = async ():Promise<IJsonPH_Todo[]> => {
@@ -7,7 +7,7 @@ export const getJsonPHModel = async ():Promise<IJsonPH_Todo[]> => {
         .then(value => value.json());
 }
 
-export const getDummyModel = async ():Promise<IDummy_Todo[]> => {
+export const getDummyModel = async ():Promise<IResponse> => {
     return await fetch(import.meta.env.VITE_API_DUMMY_URL)
         .then(item => item.json());
 
