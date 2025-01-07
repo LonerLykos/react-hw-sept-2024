@@ -9,7 +9,7 @@ export const TodoComponentsDummy = () => {
 
     useEffect(() => {
         const fetchDataDummy = async () => {
-            let response: IResponse = await getDummyModel();
+            const response: IResponse = await getDummyModel();
             const todos: IDummy_Todo[] = response.todos;
             setItem(todos);
 
