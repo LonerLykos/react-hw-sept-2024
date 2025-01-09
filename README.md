@@ -1,50 +1,16 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+task 1 tntlwuxFxI5
+Маршрутизація. Є наступні сторінки:
+UsersPage - відтворює користувачів з api dummyjson.com (довільна розмітка та кількість інфи про об'єкт)
+PostsPage - відтворює пости з з api dummyjson.com (довільна розмітка та кількість інфи про об'єкт)
+Відтворювати тільки перший відданий пул об'єктів (30 об'єктів чи скільки віддає апі)(без пагінації і не звертаючи увагу на залишки)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+task2 z5PFSTAK
+На головній сторінці вивести всіх користувачів. При кліку на певного користувача вивести його коризини товарів не заміняючи батьківський компонент (поруч з зі списком користувачів)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+task3 knZgVIwvqd
+На головній сторінці вивести всіх користувачів. При кліку на певного користувача вивести його коризини товарів заміняючи(!!!!!) батьківський компонент списком з корзинами.
