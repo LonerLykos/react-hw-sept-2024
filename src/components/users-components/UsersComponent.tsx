@@ -1,5 +1,5 @@
 import {UserComponent} from "./UserComponent.tsx";
-import {IUsers} from "../../../models/users-models/users-models.ts";
+import {IUsers} from "../../models/users-models/users-models.ts";
 import {UsersFetchComponent} from "./UsersFetchComponent.tsx";
 
 export const UsersComponent = () => {
