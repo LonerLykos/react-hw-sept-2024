@@ -1,8 +1,8 @@
-import {IUsers, IUsersResponse} from "../../models/users-models/users-models.ts";
+import {IUsers, IUsersResponse} from "../../../models/users-models/users-models.ts";
 import {useEffect, useState} from "react";
-import {getUsers} from "../../api/get-dummy-data/api.service.ts";
+import {getUsers} from "../../../api/get-dummy-data/api.service.ts";
 
-export const UsersFetchComponent = () => {
+export const UsersFetch = () => {
     const [item, setItem] = useState<IUsers[]>([]);
 
     useEffect(() => {

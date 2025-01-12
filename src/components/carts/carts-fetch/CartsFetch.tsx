@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
-import {ICarts, ICartsResponse, IProducts} from "../../models/carts-models/carts-models.ts";
+import {ICarts, ICartsResponse, IProducts} from "../../../models/carts-models/carts-models.ts";
 import {useLocation} from "react-router-dom";
-import {getCartsById} from "../../api/get-dummy-data/api.service.ts";
+import {getCartsById} from "../../../api/get-dummy-data/api.service.ts";
 
-export const CartsFetchComponent = () => {
+export const CartsFetch = () => {
     const [cart, setCart] = useState<ICarts[] | number>([]);
     const [products, setProducts] = useState<IProducts[] | number>([]);
 
@@ -14,10 +14,10 @@ export const CartsFetchComponent = () => {
         const fetchData = async () => {
             const response: ICartsResponse = await getCartsById(id);
             const cart: ICarts[] = response.carts;
-            if (cart.length ===0) {
+            if (cart.length === 0) {
                 setCart(0);
                 setProducts(0);
-            }else {
+            } else {
                 const products: IProducts[] = cart[0].products
 
                 setCart(cart);

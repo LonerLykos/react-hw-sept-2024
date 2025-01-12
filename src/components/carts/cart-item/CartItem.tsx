@@ -1,13 +1,13 @@
 import {FC} from "react";
-import {ICarts} from "../../models/carts-models/carts-models.ts";
-import {ProductsComponent} from "../products-components/ProductsComponent.tsx";
+import {ICarts} from "../../../models/carts-models/carts-models.ts";
+import {ProductsList} from "../../products/products-list/ProductsList.tsx";
 import {useLocation} from "react-router-dom";
 
-type CartPropType = {
+type Props = {
     cart: ICarts
 }
 
-export const CartComponent: FC<CartPropType> = ({cart}) => {
+export const CartItem: FC<Props> = ({cart}) => {
     const {state} = useLocation()
 
     return (
@@ -16,7 +16,7 @@ export const CartComponent: FC<CartPropType> = ({cart}) => {
             <p>Total products: {cart.totalProducts}</p>
             <p className='italic'>Total price: {cart.total}</p>
             <div>
-                <ProductsComponent/>
+                <ProductsList/>
             </div>
         </div>
     );

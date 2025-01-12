@@ -1,11 +1,11 @@
 import {FC} from "react";
-import {IProducts} from "../../models/carts-models/carts-models.ts";
+import {IProducts} from "../../../models/carts-models/carts-models.ts";
 
-type ProductPropType = {
+type Props = {
     item: IProducts;
 }
 
-export const ProductComponent: FC<ProductPropType> = ({item}) => {
+export const ProductItem: FC<Props> = ({item}) => {
     return (
         <div className='border-2 border-emerald-500 mb-5 text-center'>
             <h3 className='font-bold text-xl'>Title: {item.title}</h3>

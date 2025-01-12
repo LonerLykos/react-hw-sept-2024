@@ -1,9 +1,9 @@
-import {CartsComponent} from "../components/carts-components/CartsComponent.tsx";
+import {CartsList} from "../components/carts/carts-list/CartsList.tsx";
 
 export const UserCartsPage = () => {
     return (
         <div>
-            <CartsComponent/>
+            <CartsList/>
         </div>
     );
 };
