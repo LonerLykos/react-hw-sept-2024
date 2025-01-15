@@ -1,10 +1,15 @@
 import {createRoot} from 'react-dom/client'
 import './index.css'
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import App from "./App.tsx";
+import {BrowserRouter} from "react-router-dom";
 
-let routes = createBrowserRouter([
-    {path: '/', element: <App/>}
-]);
+import {AppRoutes} from "./routes/constants.ts";
+import {MainLayout} from "./layouts/MainLayout.tsx";
 
-createRoot(document.getElementById('root')!).render(<RouterProvider router={routes}/>)
+
+
+
+createRoot(document.getElementById('root')!).render(
+    <BrowserRouter basename={AppRoutes.root}>
+        <MainLayout />
+    </BrowserRouter>
+)
