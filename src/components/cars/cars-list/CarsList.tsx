@@ -1,11 +1,16 @@
-import {GetAllCars} from "../cars-fetch/GetAllCars.tsx";
-import {ICars} from "../../../models/cars-model.ts";
+import {GetAllCars} from "../cars-axios/GetAllCars.tsx";
+import {ICars, ICarId} from "../../../models/cars-model.ts";
 import {CarItem} from "../car-item/CarItem.tsx";
+import "./CarsList.css"
+
+type CarsItems = ICars & ICarId;
 
 export const CarsList = () => {
+
+
     return (
-        <div>
-            {GetAllCars().map((car: ICars) => <CarItem key={car.id} car={car} />)}
+        <div className='wrapper-grid'>
+            {GetAllCars().map((car: CarsItems) => <CarItem key={car.id} car={car} />)}
         </div>
     );
 };

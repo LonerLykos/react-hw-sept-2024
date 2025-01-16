@@ -1,46 +1,39 @@
 import {useRoutes} from "react-router-dom";
-import {lazy} from "react";
+import {lazy, Suspense} from "react";
 import {AppRoutes} from "./constants.ts";
-import {MainLayout} from "../layouts/MainLayout.tsx";
 
 
 const Home = lazy(() => import ('../pages/home/HomePage.tsx'));
 const Cars = lazy(() => import ('../pages/cars/CarsPage.tsx'))
-
+const AddCar = lazy(() => import ('../pages/add-car/AddCarPage.tsx'));
 
 export const RoutesComponent = () => useRoutes([
     {
         element: (
-            <MainLayout/>
-        ),
-        path: AppRoutes.root,
-        index: true,
-        children: [{
-            element: <Home/>,
-            path: AppRoutes.home,
-            index: true
-        }]
-    },
-    {
-        element: (
-            <Home/>
+            <Suspense>
+                <Home/>
+            </Suspense>
         ),
         path: AppRoutes.home,
         index: true
     },
     {
         element: (
-            <Cars/>
+            <Suspense>
+                <Cars/>
+            </Suspense>
         ),
         path: AppRoutes.cars,
-        index: true
+        index: false
     },
     {
         element: (
-            <MainLayout/>
+            <Suspense>
+                <AddCar/>
+            </Suspense>
         ),
         path: AppRoutes.addNewCar,
-        index: true
+        index: false
     },
 
 ]);

@@ -1,0 +1,3 @@
+.info{
+    @apply border-solid border-2 rounded-lg border-green-500 text-center;
+}

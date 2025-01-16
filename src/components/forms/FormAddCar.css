@@ -1,0 +1,27 @@
+input {
+    @apply rounded-lg w-full p-2 block h-6
+}
+
+.view {
+    @apply min-h-5 text-center -z-10
+}
+
+label {
+    @apply block h-12
+}
+
+form {
+    @apply flex flex-col
+}
+
+button {
+    @apply rounded-2xl
+}
+
+.wrap-input {
+    @apply grid grid-cols-2 gap-5 items-center
+}
+
+.hide {
+    @apply min-h-5 z-0;
+}

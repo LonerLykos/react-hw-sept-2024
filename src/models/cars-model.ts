@@ -1,6 +1,10 @@
 export interface ICars {
-    id: number;
     brand: string;
     price: number;
     year: number;
 }
+
+export interface ICarId {
+    id: number;
+}
+
