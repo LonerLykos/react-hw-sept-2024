@@ -1,0 +1,7 @@
+.wrapper-user {
+    @apply border-2 border-solid border-emerald-500 mb-5 text-center
+}
+
+.bold {
+    @apply font-bold;
+}

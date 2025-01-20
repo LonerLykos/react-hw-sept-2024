@@ -1,0 +1,11 @@
+.view {
+    @apply min-h-5 text-center -z-10
+}
+
+.hide {
+    @apply min-h-5 z-0;
+}
+
+.wrap-input {
+    @apply grid grid-cols-2 gap-5 items-center
+}
