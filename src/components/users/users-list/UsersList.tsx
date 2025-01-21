@@ -3,7 +3,6 @@ import {loadAuthUsers, refresh} from "../../../services/api.service.ts";
 import {IUsers} from "../../../models/IUsers.ts";
 import {UserItem} from "../user-item/UserItem.tsx";
 
-
 const UsersList = () => {
 
     //useState для визначення юзерів
