@@ -1,0 +1,1 @@
+export const getDataFromApi = async<T> (): Promise<T> => {}
